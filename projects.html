@@ -1,137 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projects — [Your Name]</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | AbdulMuiz Sunusi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f1117;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 2rem;
+      border-bottom: 1px solid #1e2332;
+      position: sticky;
+      top: 0;
+      background-color: #0f1117;
+      z-index: 100;
+    }
+
+    .nav-logo { font-weight: 700; font-size: 1.1rem; color: #38bdf8; }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+    .nav-links a { font-size: 0.9rem; color: #94a3b8; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: #38bdf8; }
+
+    .page-header {
+      text-align: center;
+      padding: 4rem 2rem 2rem;
+    }
+
+    .page-header .label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #38bdf8;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-header h1 { font-size: 2.25rem; font-weight: 700; color: #f1f5f9; }
+    .page-header p  { color: #64748b; font-size: 0.95rem; margin-top: 0.5rem; }
+
+    .divider {
+      width: 60px; height: 3px;
+      background-color: #38bdf8;
+      margin: 1.5rem auto 3rem;
+      border-radius: 2px;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 2rem 5rem;
+    }
+
+    /* ── Project Cards ── */
+    .project-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background-color: #1e2332;
+      border: 1px solid #2d3a52;
+      border-radius: 12px;
+      padding: 1.75rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      align-items: start;
+      transition: border-color 0.2s;
+    }
+
+    .project-card:hover { border-color: #38bdf8; }
+
+    .project-number {
+      font-size: 0.75rem;
+      color: #38bdf8;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 0.4rem;
+    }
+
+    .project-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card p {
+      font-size: 0.875rem;
+      color: #94a3b8;
+      margin-bottom: 1rem;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      background-color: #0f1117;
+      border: 1px solid #2d3a52;
+      color: #64748b;
+      padding: 0.2rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+    }
+
+    .project-link {
+      background-color: #38bdf8;
+      color: #0f1117;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: background-color 0.2s;
+    }
+
+    .project-link:hover { background-color: #7dd3fc; }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid #1e2332;
+      font-size: 0.8rem;
+      color: #475569;
+    }
+  </style>
 </head>
 <body>
 
-<div class="topnav">
-  <div class="brand">[Y]<span>.</span></div>
-  <div class="topnav-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="skills.html">Skills</a>
-    <a href="projects.html" class="active">Projects</a>
-    <a href="experience.html">Experience</a>
-    <a href="education.html">Education</a>
-    <a href="services.html">Services</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="contact.html">Contact</a>
+  <nav>
+    <span class="nav-logo">AbdulMuiz.dev</span>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="certifications.html">Certs</a></li>
+      <li><a href="journey.html">Journey</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <p class="label">My Projects</p>
+    <h1>What I've Built</h1>
+    <p>Projects completed as part of freeCodeCamp's curriculum and personal practice.</p>
+    <div class="divider"></div>
   </div>
-</div>
 
-<div class="shell">
+  <div class="container">
+    <div class="project-list">
 
-  <aside class="sidebar">
-    <div class="brand">[Your Name]<span>.</span></div>
-    <div class="brand-sub">Android Developer</div>
-
-    <div class="nav-label">// navigate</div>
-    <nav class="nav-list">
-      <a href="index.html">~/home</a>
-      <a href="about.html">~/about</a>
-      <a href="skills.html">~/skills</a>
-      <a href="projects.html" class="active">~/projects</a>
-      <a href="project-detail.html">~/projects/detail</a>
-      <a href="experience.html">~/experience</a>
-      <a href="education.html">~/education</a>
-      <a href="services.html">~/services</a>
-      <a href="testimonials.html">~/testimonials</a>
-      <a href="contact.html">~/contact</a>
-    </nav>
-
-    <div class="sidebar-foot">
-      <a href="mailto:[your.email@example.com]">[your.email@example.com]</a>
-      <a href="tel:[+234XXXXXXXXXX]">[+234 XXX XXX XXXX]</a>
-      <a href="[https://github.com/yourusername]">github.com/[yourusername]</a>
-      <a href="[https://linkedin.com/in/yourusername]">linkedin.com/in/[yourusername]</a>
-    </div>
-  </aside>
-
-  <div class="main">
-    <div class="content">
-
-      <div class="eyebrow">projects</div>
-      <h1>Selected work.</h1>
-      <p class="lede">A few products I've designed and built end to end.</p>
-
-      <h2>School Manager</h2>
-      <div class="card">
-        <div class="shot">[ app screenshot — dashboard ]</div>
-        <p style="margin-top:18px;">
-          A school management app for Nigerian private schools covering results,
-          fees, attendance, and WhatsApp-based parent communication. Actively used
-          by <strong>[5] schools</strong> in <strong>[Kano / Northern Nigeria]</strong>.
-        </p>
-        <div class="tag-row">
-          <span class="tag">Java</span>
-          <span class="tag">Firebase</span>
-          <span class="tag">WhatsApp API</span>
-          <span class="tag">PDF Generation</span>
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div>
+          <div class="project-number">PROJECT 01</div>
+          <h3>Tribute Page</h3>
+          <p>
+            A single-page tribute dedicated to a historical figure.
+            Practised semantic HTML, image handling, and basic CSS layout.
+          </p>
+          <div class="tag-list">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">freeCodeCamp</span>
+          </div>
         </div>
-        <div class="btn-row" style="margin-top:18px;">
-          <a href="project-detail.html" class="btn btn-primary">Full case study →</a>
-        </div>
+        <!-- Replace # with your actual project URL -->
+        <a href="#" class="project-link">View →</a>
       </div>
 
-      <h2>AgroFarm Solutions — Invoice Generator</h2>
-      <div class="card">
-        <div class="shot">[ app screenshot — invoice preview ]</div>
-        <p style="margin-top:18px;">
-          A standalone invoicing app built for <strong>AgroFarm Solutions</strong>
-          ([Kano]), using a WebView + PrintManager pipeline to generate clean,
-          professional HTML/CSS-based PDF invoices.
-        </p>
-        <div class="tag-row">
-          <span class="tag">Java</span>
-          <span class="tag">WebView</span>
-          <span class="tag">PrintManager</span>
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div>
+          <div class="project-number">PROJECT 02</div>
+          <h3>Survey Form</h3>
+          <p>
+            A fully functional HTML form with labels, inputs, dropdowns,
+            and radio buttons — styled cleanly with CSS.
+          </p>
+          <div class="tag-list">
+            <span class="tag">HTML Forms</span>
+            <span class="tag">CSS</span>
+            <span class="tag">freeCodeCamp</span>
+          </div>
         </div>
+        <a href="#" class="project-link">View →</a>
       </div>
 
-      <h2>[Project Name]</h2>
-      <div class="card">
-        <div class="shot">[ app screenshot ]</div>
-        <p style="margin-top:18px;">
-          [Short description of another project — what problem it solved, who
-          it was for, and the outcome.]
-        </p>
-        <div class="tag-row">
-          <span class="tag">[Tech]</span>
-          <span class="tag">[Tech]</span>
+      <!-- Project 3 -->
+      <div class="project-card">
+        <div>
+          <div class="project-number">PROJECT 03</div>
+          <h3>Product Landing Page</h3>
+          <p>
+            A responsive landing page for a fictional product,
+            including a nav bar, features section, and embedded video.
+          </p>
+          <div class="tag-list">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Flexbox</span>
+          </div>
         </div>
+        <a href="#" class="project-link">View →</a>
       </div>
 
-      <h2>IMGB Properties — Design &amp; Documents</h2>
-      <div class="card">
-        <div class="shot-row">
-          <div class="shot">[ property flyer ]</div>
-          <div class="shot">[ payment tracker doc ]</div>
+      <!-- Project 4 -->
+      <div class="project-card">
+        <div>
+          <div class="project-number">PROJECT 04</div>
+          <h3>Technical Documentation Page</h3>
+          <p>
+            A multi-section technical doc page with a fixed sidebar nav
+            linking to each section — great for practising CSS positioning.
+          </p>
+          <div class="tag-list">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS Grid</span>
+            <span class="tag">Navigation</span>
+          </div>
         </div>
-        <p style="margin-top:18px;">
-          Navy-and-gold branded property flyers and document work for
-          <strong>IMGB Properties</strong>, a Kano-based real estate company,
-          including payment tracking templates and formal correspondence.
-        </p>
-        <div class="tag-row">
-          <span class="tag">Brand Design</span>
-          <span class="tag">Document Design</span>
-        </div>
+        <a href="#" class="project-link">View →</a>
       </div>
 
-    </div>
+      <!-- Project 5 -->
+      <div class="project-card">
+        <div>
+          <div class="project-number">PROJECT 05</div>
+          <h3>Personal Portfolio (this site)</h3>
+          <p>
+            A 10-page portfolio website built with pure HTML and CSS —
+            showcasing my learning journey, skills, and projects.
+          </p>
+          <div class="tag-list">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Multi-page</span>
+          </div>
+        </div>
+        <a href="index.html" class="project-link">View →</a>
+      </div>
 
-    <div class="statusbar">
-      <div class="seg"><span class="dot"></span>projects.html</div>
-      <div class="seg">[4] projects shown</div>
-      <div class="seg">Built with HTML &amp; CSS</div>
     </div>
   </div>
 
-</div>
+  <footer>
+    &copy; 2025 AbdulMuiz Sunusi — Built with HTML &amp; CSS
+  </footer>
 
 </body>
 </html>

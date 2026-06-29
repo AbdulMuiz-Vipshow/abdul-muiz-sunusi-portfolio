@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certifications | AbdulMuiz Sunusi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f1117;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 2rem;
+      border-bottom: 1px solid #1e2332;
+      position: sticky;
+      top: 0;
+      background-color: #0f1117;
+      z-index: 100;
+    }
+
+    .nav-logo { font-weight: 700; font-size: 1.1rem; color: #38bdf8; }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+    .nav-links a { font-size: 0.9rem; color: #94a3b8; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: #38bdf8; }
+
+    .page-header {
+      text-align: center;
+      padding: 4rem 2rem 2rem;
+    }
+
+    .page-header .label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #38bdf8;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-header h1 { font-size: 2.25rem; font-weight: 700; color: #f1f5f9; }
+    .page-header p  { color: #64748b; font-size: 0.95rem; margin-top: 0.5rem; }
+
+    .divider {
+      width: 60px; height: 3px;
+      background-color: #38bdf8;
+      margin: 1.5rem auto 3rem;
+      border-radius: 2px;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 2rem 5rem;
+    }
+
+    /* ── Cert Card ── */
+    .cert-card {
+      background-color: #1e2332;
+      border: 1px solid #2d3a52;
+      border-radius: 14px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      transition: border-color 0.2s;
+    }
+
+    .cert-card:hover { border-color: #38bdf8; }
+
+    .cert-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .cert-info h2 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-bottom: 0.3rem;
+    }
+
+    .cert-info .issuer {
+      font-size: 0.85rem;
+      color: #64748b;
+    }
+
+    .cert-info .issuer span { color: #38bdf8; }
+
+    .cert-badge {
+      background-color: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: #38bdf8;
+      padding: 0.3rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    /* Certificate image placeholder */
+    .cert-image-wrapper {
+      background-color: #0f1117;
+      border: 2px dashed #2d3a52;
+      border-radius: 8px;
+      height: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      color: #475569;
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    /* To show the real certificate:
+       replace the <div class="cert-image-wrapper"> block with:
+       <img src="your-certificate.jpg" alt="Responsive Web Design Certificate"
+            style="width:100%;border-radius:8px;margin-bottom:1.5rem;" />
+    */
+
+    .cert-image-wrapper .icon { font-size: 2.5rem; }
+
+    /* Description under cert */
+    .cert-description {
+      font-size: 0.875rem;
+      color: #94a3b8;
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+
+    /* Topics covered */
+    .topics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .topic-tag {
+      background-color: #0f1117;
+      border: 1px solid #2d3a52;
+      color: #64748b;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+    }
+
+    /* CTA button */
+    .cert-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background-color: #38bdf8;
+      color: #0f1117;
+      padding: 0.65rem 1.5rem;
+      border-radius: 7px;
+      font-weight: 700;
+      font-size: 0.875rem;
+      transition: background-color 0.2s;
+    }
+
+    .cert-link:hover { background-color: #7dd3fc; }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid #1e2332;
+      font-size: 0.8rem;
+      color: #475569;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <span class="nav-logo">AbdulMuiz.dev</span>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certifications.html" class="active">Certs</a></li>
+      <li><a href="journey.html">Journey</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <p class="label">My Certifications</p>
+    <h1>Verified Credentials</h1>
+    <p>Certifications earned through freeCodeCamp's project-based curriculum.</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="container">
+
+    <!-- ── Certification 1 ── -->
+    <div class="cert-card">
+      <div class="cert-meta">
+        <div class="cert-info">
+          <h2>Responsive Web Design</h2>
+          <p class="issuer">Issued by <span>freeCodeCamp</span> · 2024</p>
+        </div>
+        <span class="cert-badge">✓ Verified</span>
+      </div>
+
+      <!--
+        HOW TO ADD YOUR CERTIFICATE IMAGE:
+        1. Save your certificate screenshot as "cert-responsive.jpg" (or .png)
+           in the same folder as this HTML file.
+        2. Delete the entire <div class="cert-image-wrapper"> block below.
+        3. Replace it with:
+           <img src="cert-responsive.jpg"
+                alt="Responsive Web Design Certificate"
+                style="width:100%;border-radius:8px;margin-bottom:1.5rem;" />
+      -->
+      <div class="cert-image-wrapper">
+        <div class="icon">🖼️</div>
+        <div>
+          Certificate image goes here.<br />
+          Replace this block with an &lt;img&gt; tag pointing to your screenshot.
+        </div>
+      </div>
+
+      <p class="cert-description">
+        This certification covers building responsive websites using HTML and CSS.
+        It includes 300+ hours of coursework across visual design, accessibility,
+        CSS Flexbox, CSS Grid, and five hands-on certification projects reviewed
+        and verified by freeCodeCamp.
+      </p>
+
+      <div class="topics">
+        <span class="topic-tag">HTML5</span>
+        <span class="topic-tag">CSS3</span>
+        <span class="topic-tag">Flexbox</span>
+        <span class="topic-tag">CSS Grid</span>
+        <span class="topic-tag">Accessibility</span>
+        <span class="topic-tag">Responsive Design</span>
+        <span class="topic-tag">Visual Design</span>
+      </div>
+
+      <!--
+        Replace the href="#" below with the actual URL of your
+        freeCodeCamp certificate, e.g.:
+        href="https://www.freecodecamp.org/certification/AbdulMuiz/responsive-web-design"
+      -->
+      <a href="#" target="_blank" class="cert-link">
+        🔗 View Certificate on freeCodeCamp
+      </a>
+    </div>
+
+    <!-- ── Placeholder for future certs ── -->
+    <div class="cert-card" style="border-style: dashed; opacity: 0.5;">
+      <div class="cert-meta">
+        <div class="cert-info">
+          <h2>JavaScript Algorithms &amp; Data Structures</h2>
+          <p class="issuer">Issued by <span>freeCodeCamp</span> · In Progress</p>
+        </div>
+        <span class="cert-badge" style="background-color:rgba(100,116,139,0.1);border-color:rgba(100,116,139,0.3);color:#64748b;">
+          Coming Soon
+        </span>
+      </div>
+      <p class="cert-description" style="color:#475569;">
+        Currently working through the JavaScript Algorithms and Data Structures curriculum.
+        This certification will cover variables, loops, functions, arrays, and algorithm scripting.
+      </p>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 AbdulMuiz Sunusi — Built with HTML &amp; CSS
+  </footer>
+
+</body>
+</html>

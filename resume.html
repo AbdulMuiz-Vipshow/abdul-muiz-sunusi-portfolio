@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | AbdulMuiz Sunusi</title>
+  <title>Resume | AbdulMuiz Sunusi</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
@@ -59,40 +59,60 @@
     }
 
     .container {
-      max-width: 600px;
+      max-width: 700px;
       margin: 0 auto;
       padding: 0 2rem 5rem;
     }
 
-    /* ── Contact Info Cards ── */
-    .contact-card {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
+    .resume-section { margin-bottom: 2.5rem; }
+
+    .resume-section h2 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #38bdf8;
+      margin-bottom: 1rem;
+    }
+
+    .resume-card {
       background-color: #1e2332;
       border: 1px solid #2d3a52;
       border-radius: 10px;
       padding: 1.25rem 1.5rem;
-      margin-bottom: 1rem;
-      transition: border-color 0.2s;
+      margin-bottom: 0.85rem;
     }
 
-    .contact-card:hover { border-color: #38bdf8; }
-
-    .contact-icon { font-size: 1.4rem; }
-
-    .contact-label {
-      font-size: 0.75rem;
-      color: #475569;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 0.2rem;
-    }
-
-    .contact-value {
-      font-size: 0.95rem;
+    .resume-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
       color: #f1f5f9;
-      font-weight: 500;
+      margin-bottom: 0.3rem;
+    }
+
+    .resume-card .resume-sub {
+      font-size: 0.8rem;
+      color: #38bdf8;
+      margin-bottom: 0.5rem;
+    }
+
+    .resume-card p {
+      font-size: 0.875rem;
+      color: #94a3b8;
+    }
+
+    .skills-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .skill-pill {
+      background-color: #1e2332;
+      border: 1px solid #2d3a52;
+      color: #94a3b8;
+      padding: 0.3rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
     }
 
     footer {
@@ -117,51 +137,47 @@
       <li><a href="journey.html">Journey</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="resume.html">Resume</a></li>
-      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="resume.html" class="active">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
   <div class="page-header">
-    <p class="label">Get in Touch</p>
-    <h1>Contact</h1>
-    <p>Here's how you can reach me.</p>
+    <p class="label">My Resume</p>
+    <h1>AbdulMuiz Sunusi</h1>
+    <p>Aspiring Web Developer building skills through freeCodeCamp.</p>
     <div class="divider"></div>
   </div>
 
   <div class="container">
 
-    <!-- Replace the placeholder values below with your real details -->
-
-    <div class="contact-card">
-      <span class="contact-icon">📧</span>
-      <div>
-        <div class="contact-label">Email</div>
-        <div class="contact-value">abdulmuiz.sunusi@email.com</div>
+    <div class="resume-section">
+      <h2>Education</h2>
+      <div class="resume-card">
+        <h3>Software Engineering</h3>
+        <p class="resume-sub">Northwest University</p>
+        <p>Studying software engineering, with a growing focus on web development.</p>
       </div>
     </div>
 
-    <div class="contact-card">
-      <span class="contact-icon">💼</span>
-      <div>
-        <div class="contact-label">LinkedIn</div>
-        <div class="contact-value">linkedin.com/in/abdulmuiz-sunusi</div>
+    <div class="resume-section">
+      <h2>Certifications</h2>
+      <div class="resume-card">
+        <h3>Responsive Web Design</h3>
+        <p class="resume-sub">freeCodeCamp · 2024</p>
+        <p>300+ hours covering HTML, CSS, Flexbox, Grid, and accessibility.</p>
       </div>
     </div>
 
-    <div class="contact-card">
-      <span class="contact-icon">🐙</span>
-      <div>
-        <div class="contact-label">GitHub</div>
-        <div class="contact-value">github.com/abdulmuiz-sunusi</div>
-      </div>
-    </div>
-
-    <div class="contact-card">
-      <span class="contact-icon">📍</span>
-      <div>
-        <div class="contact-label">Location</div>
-        <div class="contact-value">Kano, Nigeria</div>
+    <div class="resume-section">
+      <h2>Skills</h2>
+      <div class="skills-row">
+        <span class="skill-pill">HTML5</span>
+        <span class="skill-pill">CSS3</span>
+        <span class="skill-pill">Flexbox &amp; Grid</span>
+        <span class="skill-pill">JavaScript Basics</span>
+        <span class="skill-pill">Responsive Design</span>
+        <span class="skill-pill">Git &amp; GitHub</span>
       </div>
     </div>
 

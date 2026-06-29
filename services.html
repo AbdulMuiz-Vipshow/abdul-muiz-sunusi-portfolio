@@ -1,151 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services — [Your Name]</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | AbdulMuiz Sunusi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f1117;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 2rem;
+      border-bottom: 1px solid #1e2332;
+      position: sticky;
+      top: 0;
+      background-color: #0f1117;
+      z-index: 100;
+    }
+
+    .nav-logo { font-weight: 700; font-size: 1.1rem; color: #38bdf8; }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+    .nav-links a { font-size: 0.9rem; color: #94a3b8; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: #38bdf8; }
+
+    .page-header {
+      text-align: center;
+      padding: 4rem 2rem 2rem;
+    }
+
+    .page-header .label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #38bdf8;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-header h1 { font-size: 2.25rem; font-weight: 700; color: #f1f5f9; }
+    .page-header p  { color: #64748b; font-size: 0.95rem; margin-top: 0.5rem; }
+
+    .divider {
+      width: 60px; height: 3px;
+      background-color: #38bdf8;
+      margin: 1.5rem auto 3rem;
+      border-radius: 2px;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 2rem 5rem;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .service-card {
+      background-color: #1e2332;
+      border: 1px solid #2d3a52;
+      border-radius: 12px;
+      padding: 1.75rem;
+      transition: border-color 0.2s;
+    }
+
+    .service-card:hover { border-color: #38bdf8; }
+
+    .service-icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
+
+    .service-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-card p {
+      font-size: 0.875rem;
+      color: #94a3b8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid #1e2332;
+      font-size: 0.8rem;
+      color: #475569;
+    }
+  </style>
 </head>
 <body>
 
-<div class="topnav">
-  <div class="brand">[Y]<span>.</span></div>
-  <div class="topnav-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="skills.html">Skills</a>
-    <a href="projects.html">Projects</a>
-    <a href="experience.html">Experience</a>
-    <a href="education.html">Education</a>
-    <a href="services.html" class="active">Services</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="contact.html">Contact</a>
+  <nav>
+    <span class="nav-logo">AbdulMuiz.dev</span>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certifications.html">Certs</a></li>
+      <li><a href="journey.html">Journey</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <p class="label">What I Offer</p>
+    <h1>Services</h1>
+    <p>Simple, focused help — built on what I've learned through freeCodeCamp.</p>
+    <div class="divider"></div>
   </div>
-</div>
 
-<div class="shell">
+  <div class="container">
+    <div class="service-grid">
 
-  <aside class="sidebar">
-    <div class="brand">[Your Name]<span>.</span></div>
-    <div class="brand-sub">Android Developer</div>
-
-    <div class="nav-label">// navigate</div>
-    <nav class="nav-list">
-      <a href="index.html">~/home</a>
-      <a href="about.html">~/about</a>
-      <a href="skills.html">~/skills</a>
-      <a href="projects.html">~/projects</a>
-      <a href="project-detail.html">~/projects/detail</a>
-      <a href="experience.html">~/experience</a>
-      <a href="education.html">~/education</a>
-      <a href="services.html" class="active">~/services</a>
-      <a href="testimonials.html">~/testimonials</a>
-      <a href="contact.html">~/contact</a>
-    </nav>
-
-    <div class="sidebar-foot">
-      <a href="mailto:[your.email@example.com]">[your.email@example.com]</a>
-      <a href="tel:[+234XXXXXXXXXX]">[+234 XXX XXX XXXX]</a>
-      <a href="[https://github.com/yourusername]">github.com/[yourusername]</a>
-      <a href="[https://linkedin.com/in/yourusername]">linkedin.com/in/[yourusername]</a>
-    </div>
-  </aside>
-
-  <div class="main">
-    <div class="content">
-
-      <div class="eyebrow">services</div>
-      <h1>How I can help.</h1>
-      <p class="lede">
-        Available for freelance and contract Android development —
-        from a single feature to a full product.
-      </p>
-
-      <h2>What I offer</h2>
-
-      <div class="card" style="margin-bottom:18px;">
-        <h3>Native Android App Development</h3>
-        <p>
-          End-to-end build of a native Android app in Java — architecture,
-          Firebase backend, UI implementation, and Play Store deployment.
-        </p>
-        <div class="tag-row"><span class="tag">From [₦XXX,XXX]</span></div>
+      <div class="service-card">
+        <div class="service-icon">🧱</div>
+        <h3>Static Website Building</h3>
+        <p>Clean, structured HTML &amp; CSS pages — landing pages, portfolios, and simple multi-page sites.</p>
       </div>
 
-      <div class="card" style="margin-bottom:18px;">
-        <h3>Firebase Backend Design</h3>
-        <p>
-          Realtime Database schema design, Cloud Functions, and secure,
-          scalable data architecture for an existing or new app.
-        </p>
-        <div class="tag-row"><span class="tag">From [₦XXX,XXX]</span></div>
+      <div class="service-card">
+        <div class="service-icon">📱</div>
+        <h3>Responsive Layouts</h3>
+        <p>Making sure a page looks right on phones, tablets, and desktops using Flexbox and Grid.</p>
       </div>
 
-      <div class="card" style="margin-bottom:18px;">
-        <h3>PDF &amp; Print Systems</h3>
-        <p>
-          Custom receipt, invoice, or report generation using WebView and
-          PrintManager — clean, branded, print-ready output.
-        </p>
-        <div class="tag-row"><span class="tag">From [₦XXX,XXX]</span></div>
+      <div class="service-card">
+        <div class="service-icon">🎨</div>
+        <h3>UI Styling</h3>
+        <p>Turning plain HTML into something visually clean and easy to use, with thoughtful CSS.</p>
       </div>
 
-      <div class="card" style="margin-bottom:18px;">
-        <h3>WhatsApp / SMS Integration</h3>
-        <p>
-          Automated messaging flows with delivery fallback — useful for
-          schools, businesses, and service providers communicating with
-          customers at scale.
-        </p>
-        <div class="tag-row"><span class="tag">From [₦XXX,XXX]</span></div>
+      <div class="service-card">
+        <div class="service-icon">🛠️</div>
+        <h3>Code Cleanup</h3>
+        <p>Reviewing and tidying up existing HTML/CSS — better structure, readability, and consistency.</p>
       </div>
 
-      <div class="card">
-        <h3>Brand &amp; Document Design</h3>
-        <p>
-          Flyers, payment trackers, and formal documents designed to match
-          your brand — built for businesses that need professional materials
-          fast.
-        </p>
-        <div class="tag-row"><span class="tag">From [₦XXX,XXX]</span></div>
-      </div>
-
-      <hr class="divider">
-
-      <h2>How we'd work together</h2>
-      <div class="timeline">
-        <div class="tl-item">
-          <h3>1. Discovery call</h3>
-          <p>We talk through your problem, goals, and constraints.</p>
-        </div>
-        <div class="tl-item">
-          <h3>2. Proposal &amp; pricing</h3>
-          <p>You get a clear scope, timeline, and cost — no surprises.</p>
-        </div>
-        <div class="tl-item">
-          <h3>3. Build &amp; check-ins</h3>
-          <p>Regular updates as the app comes together.</p>
-        </div>
-        <div class="tl-item">
-          <h3>4. Delivery &amp; support</h3>
-          <p>Deployment plus a defined window of post-launch support.</p>
-        </div>
-      </div>
-
-      <div class="btn-row">
-        <a href="contact.html" class="btn btn-primary">Start a Project →</a>
-      </div>
-
-    </div>
-
-    <div class="statusbar">
-      <div class="seg"><span class="dot"></span>services.html</div>
-      <div class="seg">Available for freelance</div>
-      <div class="seg">Built with HTML &amp; CSS</div>
     </div>
   </div>
 
-</div>
+  <footer>
+    &copy; 2025 AbdulMuiz Sunusi — Built with HTML &amp; CSS
+  </footer>
 
 </body>
 </html>

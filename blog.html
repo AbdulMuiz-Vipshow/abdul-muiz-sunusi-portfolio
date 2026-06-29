@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | AbdulMuiz Sunusi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f1117;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 2rem;
+      border-bottom: 1px solid #1e2332;
+      position: sticky;
+      top: 0;
+      background-color: #0f1117;
+      z-index: 100;
+    }
+
+    .nav-logo { font-weight: 700; font-size: 1.1rem; color: #38bdf8; }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+    .nav-links a { font-size: 0.9rem; color: #94a3b8; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: #38bdf8; }
+
+    .page-header {
+      text-align: center;
+      padding: 4rem 2rem 2rem;
+    }
+
+    .page-header .label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #38bdf8;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-header h1 { font-size: 2.25rem; font-weight: 700; color: #f1f5f9; }
+    .page-header p  { color: #64748b; font-size: 0.95rem; margin-top: 0.5rem; }
+
+    .divider {
+      width: 60px; height: 3px;
+      background-color: #38bdf8;
+      margin: 1.5rem auto 3rem;
+      border-radius: 2px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem 5rem;
+    }
+
+    /* ── Blog Post Cards ── */
+    .post-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .post-card {
+      background-color: #1e2332;
+      border: 1px solid #2d3a52;
+      border-radius: 12px;
+      padding: 1.75rem;
+      transition: border-color 0.2s;
+    }
+
+    .post-card:hover { border-color: #38bdf8; }
+
+    .post-meta {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 0.75rem;
+      font-size: 0.75rem;
+      color: #475569;
+    }
+
+    .post-meta .post-tag {
+      color: #38bdf8;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .post-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      margin-bottom: 0.6rem;
+    }
+
+    .post-card p {
+      font-size: 0.875rem;
+      color: #94a3b8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid #1e2332;
+      font-size: 0.8rem;
+      color: #475569;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <span class="nav-logo">AbdulMuiz.dev</span>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certifications.html">Certs</a></li>
+      <li><a href="journey.html">Journey</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <p class="label">Notes &amp; Thoughts</p>
+    <h1>My Blog</h1>
+    <p>Short notes on what I'm learning and figuring out along the way.</p>
+    <div class="divider"></div>
+  </div>
+
+  <div class="container">
+    <div class="post-list">
+
+      <!-- Post 1 -->
+      <div class="post-card">
+        <div class="post-meta">
+          <span class="post-tag">CSS</span>
+          <span>·</span>
+          <span>5 min read</span>
+        </div>
+        <h3>Why Flexbox Finally Made Layout Click for Me</h3>
+        <p>
+          For a while, CSS layout felt like guesswork. Learning Flexbox through
+          freeCodeCamp's exercises changed that — here's what helped it finally
+          make sense, from justify-content to the often-confusing flex-grow.
+        </p>
+      </div>
+
+      <!-- Post 2 -->
+      <div class="post-card">
+        <div class="post-meta">
+          <span class="post-tag">HTML</span>
+          <span>·</span>
+          <span>3 min read</span>
+        </div>
+        <h3>Semantic HTML: Small Tags, Big Difference</h3>
+        <p>
+          Switching from generic divs to tags like &lt;header&gt;, &lt;main&gt;,
+          and &lt;article&gt; taught me how much structure matters — for
+          accessibility, SEO, and just writing code that's easier to read.
+        </p>
+      </div>
+
+      <!-- Post 3 -->
+      <div class="post-card">
+        <div class="post-meta">
+          <span class="post-tag">Mindset</span>
+          <span>·</span>
+          <span>4 min read</span>
+        </div>
+        <h3>What I Learned From My First Certification Project</h3>
+        <p>
+          Building the Tribute Page project taught me more about debugging,
+          patience, and reading documentation than any tutorial could. A few
+          honest lessons from getting unstuck — repeatedly.
+        </p>
+      </div>
+
+      <!-- Post 4 -->
+      <div class="post-card">
+        <div class="post-meta">
+          <span class="post-tag">JavaScript</span>
+          <span>·</span>
+          <span>6 min read</span>
+        </div>
+        <h3>Starting JavaScript: Variables, Loops, and a Lot of Console.log</h3>
+        <p>
+          My early notes on moving from static pages to logic-driven code —
+          including the moment loops and conditionals finally started to feel
+          intuitive instead of intimidating.
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 AbdulMuiz Sunusi — Built with HTML &amp; CSS
+  </footer>
+
+</body>
+</html>
